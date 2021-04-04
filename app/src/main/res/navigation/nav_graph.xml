@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ContactsListFragment">
+
+    <fragment android:id="@+id/AutotestsStartFragment"
+        android:name="com.bdev.contacts_list.ui.fragments.autotests.AutotestsStartFragment"
+        android:label="Autotests start"
+        tools:layout="@layout/fragment_autotests_start">
+
+        <action
+            android:id="@+id/action_autotests_start_to_contacts_list"
+            app:destination="@id/ContactsListFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/ContactsListFragment"
+        android:name="com.bdev.contacts_list.ui.fragments.contacts_list.ContactsListFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_contacts_list">
+
+        <action
+            android:id="@+id/action_contacts_list_to_contact_details"
+            app:destination="@id/ContactDetailsFragment">
+
+            <argument android:name="contactId" app:argType="integer"/>
+
+        </action>
+
+    </fragment>
+
+    <fragment android:id="@+id/ContactDetailsFragment"
+        android:name="com.bdev.contacts_list.ui.fragments.contact_details.ContactDetailsFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_contact_details">
+
+        <action
+            android:id="@+id/action_contact_details_to_contact_list"
+            app:destination="@id/ContactsListFragment"/>
+
+        <argument android:name="contactId" app:argType="integer"/>
+
+    </fragment>
+
+</navigation>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="UseAppTint">
+
+    <RelativeLayout
+        android:id="@+id/contactsListItemRootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/contactsListItemIconView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/layout_oval"
+            android:tint="#aaaaaa"
+            android:importantForAccessibility="no"/>
+
+        <TextView
+            android:id="@+id/contactsListItemNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/contactsListItemIconView"
+            android:layout_marginStart="20dp"
+            android:textColor="#000000"
+            android:text="HELLO"/>
+
+    </RelativeLayout>
+
+</merge>
